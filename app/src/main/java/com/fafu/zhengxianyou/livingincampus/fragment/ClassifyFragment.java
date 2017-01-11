@@ -63,14 +63,13 @@ public class ClassifyFragment extends BaseFragment {
         ClassifyBean weather = new ClassifyBean(R.drawable.weather, R.string.weather);
         gridBeanList.add(weather);
 
-        ClassifyBean periphery = new ClassifyBean(R.drawable.periphery, R.string.periphery);
-        gridBeanList.add(periphery);
+        ClassifyBean bus = new ClassifyBean(R.drawable.icon_bus, R.string.bus);
+        gridBeanList.add(bus);
 
         ClassifyBean route = new ClassifyBean(R.drawable.route, R.string.route);
         gridBeanList.add(route);
 
-        ClassifyBean bus = new ClassifyBean(R.drawable.icon_bus, R.string.bus);
-        gridBeanList.add(bus);
+
 
 
         gv_classify.setAdapter(new ClassifyAdapter(mContext, gridBeanList));
@@ -96,18 +95,13 @@ public class ClassifyFragment extends BaseFragment {
                         startActivity(new Intent(mContext, WeatherActivity.class));
                         break;
                     case 4:
-                        Utils.toast(mContext, "此模块待开发...");
+                        startActivity(new Intent(mContext, BusLineActivity.class));
 
                         break;
                     case 5:
                         startActivity(new Intent(mContext, PoiAroundSearchActivity.class));
 
                         break;
-                    case 6:
-                        startActivity(new Intent(mContext, BusLineActivity.class));
-
-                        break;
-
 
                 }
             }

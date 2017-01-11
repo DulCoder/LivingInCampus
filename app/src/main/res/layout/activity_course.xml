@@ -30,7 +30,7 @@
         android:drawableLeft="@drawable/password"
         android:hint="教务处密码"
         android:text=""
-        android:password="true" />
+        android:inputType="textPassword" />
 
     <LinearLayout
         android:id="@+id/ll_code"
