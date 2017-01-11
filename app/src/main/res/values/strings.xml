@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">LivingInCampus</string>
+    <string name="fafu">福建农林大学...</string>
+    <string name="titleBar">校园生活</string>
+    <string name="home">首 页</string>
+    <string name="classify">分 类</string>
+    <string name="user">个人中心</string>
+    <string name="focus">农大要闻</string>
+    <string name="announcement">公示公告</string>
+    <string name="campusCulture">文化校园</string>
+    <string name="collegeTends">学院动态</string>
+    <string name="academicTends">教务动态</string>
+    <string name="loading">加载中...</string>
+    <string name="freshmen">课程表</string>
+    <string name="library">图书馆</string>
+    <string name="community">校园社区</string>
+    <string name="weather">天气</string>
+    <string name="periphery">周边游</string>
+    <string name="route">出行规划</string>
+    <string name="bus">公交查询</string>
+    <string name="mapSearch">周边搜索</string>
+    <string name="weather_live">实时</string>
+    <string name="report_time">发布时间</string>
+    <string name="weather_forecast">预报</string>
+
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+</resources>

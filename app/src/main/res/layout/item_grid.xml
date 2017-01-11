@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_classify"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/freshmen" />
+
+    <TextView
+        android:id="@+id/tv_classify"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="新生"
+        android:textColor="#000"
+        android:textSize="12sp" />
+
+</LinearLayout>
