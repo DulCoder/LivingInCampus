@@ -12,6 +12,8 @@ import com.fafu.zhengxianyou.livingincampus.R;
 import com.fafu.zhengxianyou.livingincampus.adapter.HomeFragmentAdapter;
 import com.fafu.zhengxianyou.livingincampus.base.BaseFragment;
 import com.fafu.zhengxianyou.livingincampus.bean.ResultBeanData;
+import com.fafu.zhengxianyou.livingincampus.config.Config;
+import com.fafu.zhengxianyou.livingincampus.utils.Utils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -269,6 +271,10 @@ public class HomeFragment extends BaseFragment{
         Log.e(TAG, "常用框架Fragment数据被初始化了...");
 
         // 开辟一个子线程请求网络数据
-        new Thread(runnable).start();
+        if (Config.isConnectNet()) {
+            new Thread(runnable).start();
+        }else {
+            Utils.toast(mContext,"无网络");
+        }
     }
 }

@@ -8,12 +8,14 @@
     <color name="colorGray">#eeeeee</color>
     <color name="colorWhite">#ffffff</color>
     <color name="transparent">#00000000</color>
-    <color name="darkgrey"> #C0C0C0</color>
+    <color name="darkGray"> #C0C0C0</color>
     <color name="gary">#898989</color>
     <color name="blue">#4c90f9</color>
     <color name="act_background">#efefef</color>
     <color name="black"> #000000</color>
-
+    <color name="button">#03a9f4</color>
+    <color name="item">#e0f7fa</color>
+    <color name="gold">#ffab00</color>
 
     <color name="red"> #FF0000</color>
     <color name="f850_default_blue">#0079ff</color>
@@ -30,7 +32,7 @@
     <color name="offline_down_size">#777777</color>
     <color name="gray_lite">#c5c5c5</color>
     <color name="progress_background">#ededed</color>
-    <color name="itemlist">#f4f4f4</color>
+    <color name="itemList">#f4f4f4</color>
     <color name="phone_bg">#f6f6f6</color>
     <color name="translucent">#66000000</color>
 

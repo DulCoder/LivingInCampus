@@ -32,17 +32,26 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
+    compile fileTree(include: '*.jar', dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:recyclerview-v7:24.2.1'
-    testCompile 'junit:junit:4.12'
-    compile 'com.youth.banner:banner:1.4.5'
+
     compile files('libs/glide-3.7.0.jar')
-    compile 'com.google.code.gson:gson:2.2.4'
     compile files('libs/jsoup-1.10.1.jar')
     compile files('libs/AMap3DMap_4.1.3_AMapSearch_3.6.1_AMapLocation_3.2.1_20161228.jar')
+    compile files('libs/BmobSDK_3.5.3_20161116.jar')
+    compile files('libs/gson-2.6.2.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/rxandroid-1.2.0.jar')
+    compile files('libs/rxjava-1.1.6.jar')
+    compile files('libs/okio-1.7.0.jar')
+    compile files('libs/okhttp-3.3.1.jar')
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
     compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.youth.banner:banner:1.4.5'
+    compile 'com.android.support:design:24.2.1'
+    testCompile 'junit:junit:4.12'
+
 }

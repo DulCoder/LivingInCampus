@@ -7,15 +7,15 @@ import android.widget.GridView;
 
 import com.fafu.zhengxianyou.livingincampus.BannerInfoActivity;
 import com.fafu.zhengxianyou.livingincampus.BusLineActivity;
+import com.fafu.zhengxianyou.livingincampus.CommunityActivity;
 import com.fafu.zhengxianyou.livingincampus.Constants.Constant;
 import com.fafu.zhengxianyou.livingincampus.CourseActivity;
-import com.fafu.zhengxianyou.livingincampus.route.PoiAroundSearchActivity;
 import com.fafu.zhengxianyou.livingincampus.R;
 import com.fafu.zhengxianyou.livingincampus.WeatherActivity;
 import com.fafu.zhengxianyou.livingincampus.adapter.ClassifyAdapter;
 import com.fafu.zhengxianyou.livingincampus.base.BaseFragment;
 import com.fafu.zhengxianyou.livingincampus.bean.ClassifyBean;
-import com.fafu.zhengxianyou.livingincampus.utils.Utils;
+import com.fafu.zhengxianyou.livingincampus.route.PoiAroundSearchActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,8 +88,8 @@ public class ClassifyFragment extends BaseFragment {
                         startActivity(intent);
                         break;
                     case 2:
-                        Utils.toast(mContext, "此模块待开发...");
-
+//                        Utils.toast(mContext, "此模块待开发...");
+                        startActivity(new Intent(mContext, CommunityActivity.class));
                         break;
                     case 3:
                         startActivity(new Intent(mContext, WeatherActivity.class));

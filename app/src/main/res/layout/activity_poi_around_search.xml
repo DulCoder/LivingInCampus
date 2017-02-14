@@ -63,7 +63,7 @@
                 android:drawableLeft="@drawable/search_input"
                 android:background="@color/transparent"
                 android:hint="请输入搜索关键字"
-                android:textColorHint="@color/darkgrey"
+                android:textColorHint="@color/darkGray"
                 android:maxLines="1"
                 android:textColor="@color/gary"
                 android:textSize="14sp" />

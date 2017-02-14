@@ -1,15 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@color/colorGray"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:text="UserFragment待开发"/>
+   <RelativeLayout
+       android:layout_marginTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="140dp"
+       android:background="@color/colorWhite"
+       >
+       <ImageView
+           android:id="@+id/myIcon"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_marginLeft="10dp"
+           android:background="@drawable/overcast"
+           android:layout_centerVertical="true"/>
 
-</LinearLayout>
+       <TextView
+           android:id="@+id/myId"
+           android:layout_centerVertical="true"
+           android:layout_toRightOf="@+id/myIcon"
+           android:layout_marginLeft="10dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="25sp"
+           android:textColor="@color/blue"
+           android:text="未登录"/>
+   </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/changeIcon"
+        android:layout_above="@+id/changeID"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:text="更换头像"/>
+
+   <Button
+        android:id="@+id/changeID"
+        android:layout_above="@+id/login_reg"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:text="修改昵称"/>
+
+    <Button
+        android:id="@+id/login_reg"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:text="登录/注册"/>
+    <Button
+        android:id="@+id/logout"
+        android:visibility="gone"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        android:text="退出登录"/>
+</RelativeLayout>

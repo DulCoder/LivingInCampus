@@ -5,6 +5,9 @@ package com.fafu.zhengxianyou.livingincampus.Constants;
  */
 
 public class Constant {
+    //Bmob后端云Application ID
+    public static final String BMOB_APP_ID = "7b64e748a03eb3a873a7c703f399cf2b";
+
     //福建农林大学官网
     public static final String FAFU = "http://www.fafu.edu.cn";
 
@@ -29,5 +32,6 @@ public class Constant {
     //高德key
     public static final String AMAPKEY = "24c64b84e1d42b6858387de12d60e8ae";
 
-
+    //SharedPreferences名称
+    public static final String SP_NAME = "Campus";
 }

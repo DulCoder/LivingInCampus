@@ -24,4 +24,7 @@
     <string name="weather_forecast">预报</string>
 
     <string name="no_result">对不起，没有搜索到相关数据！</string>
+    <string name="title_activity_community">CommunityActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

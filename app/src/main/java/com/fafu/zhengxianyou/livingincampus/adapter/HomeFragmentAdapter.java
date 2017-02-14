@@ -102,32 +102,39 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
         switch (getItemViewType(position)) {
             case BANNER:
                 BannerViewHolder bannerViewHolder = (BannerViewHolder) holder;
+
                 //设置banner的数据
+                if (resultBean.getPictureUrlBeanList()!=null)
                 bannerViewHolder.setData(resultBean.getPictureUrlBeanList());
                 break;
             case FOCUS:
                 FocusViewHolder focusViewHolder = (FocusViewHolder) holder;
 
+                if (resultBean.getFocusBeanList()!=null)
                 focusViewHolder.setData(resultBean.getFocusBeanList());
                 break;
             case ANNOUNCEMENT:
                 AnnouncementViewHolder announcementViewHolder = (AnnouncementViewHolder) holder;
 
+                if (resultBean.getAnnouncementBeanList()!=null)
                 announcementViewHolder.setData(resultBean.getAnnouncementBeanList());
                 break;
             case CAMPUS_CULTURE:
                 CampusCultureViewHolder campusCultureViewHolder = (CampusCultureViewHolder) holder;
 
+                if (resultBean.getCampusCultureBeanList()!=null)
                 campusCultureViewHolder.setData(resultBean.getCampusCultureBeanList());
                 break;
             case COLLEGE_TENDS:
                 CollegeTendsViewHolder collegeTendsViewHolder = (CollegeTendsViewHolder) holder;
 
+                if (resultBean.getCollegeTendsBeanList()!=null)
                 collegeTendsViewHolder.setData(resultBean.getCollegeTendsBeanList());
                 break;
             case ACADEMIC_TENDS:
                 AcademicTendsViewHolder academicTendsViewHolder = (AcademicTendsViewHolder) holder;
 
+                if (resultBean.getAcademicTendsBeanList()!=null)
                 academicTendsViewHolder.setData(resultBean.getAcademicTendsBeanList());
                 break;
         }

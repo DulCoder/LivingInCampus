@@ -27,5 +27,7 @@
     <dimen name="margin_padding">15dp</dimen>
     <dimen name="zero">0dp</dimen>
     <dimen name="trace_spinner_padding">2dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
 
 </resources>

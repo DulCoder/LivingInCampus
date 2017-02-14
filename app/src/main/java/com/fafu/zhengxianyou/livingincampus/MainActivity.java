@@ -27,6 +27,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private RadioGroup mRg_main;
     private List<BaseFragment> mBaseFragment;
+    private static final String TAG = MainActivity.class.getSimpleName();
+
 
     /**
      * 选中的Fragment的对应的位置
@@ -73,6 +75,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+        String icon = getIntent().getStringExtra("icon");
+        String nickName = getIntent().getStringExtra("nickName");
+        Config.setMyIcon(icon);
+        Config.setNickName(nickName);
         //申请所需要的权限
         checkNeedPermission();
         //初始化View
@@ -100,6 +107,12 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE
             },2);
         }
+          if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_PHONE_STATE
+            },3);
+        }
+
     }
 
     /**
@@ -128,7 +141,9 @@ public class MainActivity extends AppCompatActivity {
         mLocationClient.startLocation();
     }
 
-
+    /**
+     * RadioButton监听事件
+     */
     private void setListener() {
         mRg_main.setOnCheckedChangeListener(new MyOnCheckedChangeListener());
         //设置默认选中常用框架
@@ -164,14 +179,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     *
      * @param from 刚显示的Fragment,马上就要被隐藏了
      * @param to 马上要切换到的Fragment，一会要显示
      */
     private void switchFragment(Fragment from,Fragment to) {
         if(from != to){
             mContent = to;
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
             //才切换
             //判断有没有被添加
             if(!to.isAdded()){
@@ -221,4 +235,6 @@ public class MainActivity extends AppCompatActivity {
         mRg_main = (RadioGroup) findViewById(R.id.rg_main);
 
     }
+
+
 }
