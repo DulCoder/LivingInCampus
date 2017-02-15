@@ -39,6 +39,8 @@ public class UserFragment extends BaseFragment implements View.OnClickListener {
         super.onResume();
         if (Config.getNickName()!=null){
             myId.setText(Config.getNickName());
+            loginReg.setClickable(false);
+            logout.setVisibility(View.VISIBLE);
             String icon = Config.getMyIcon();
             switch (icon) {
                 case "icon1":
@@ -122,10 +124,23 @@ public class UserFragment extends BaseFragment implements View.OnClickListener {
 
                 break;
              case R.id.logout:      //退出登录
-                 MyUser user = new MyUser();
-                 user.logOut();
+                 logOff();
                 break;
 
         }
+    }
+
+    /**
+     * 退出登录相关
+     */
+    private void logOff() {
+        MyUser user = new MyUser();
+        user.logOut();
+        loginReg.setClickable(true);
+        logout.setVisibility(View.GONE);
+        myIcon.setImageResource(R.drawable.overcast);
+        myId.setText("未登录");
+        Config.setMyIcon(null);
+        Config.setNickName(null);
     }
 }

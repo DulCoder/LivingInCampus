@@ -4,10 +4,20 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.fafu.zhengxianyou.livingincampus.R;
+import com.fafu.zhengxianyou.livingincampus.adapter.CommunityAdapter;
 import com.fafu.zhengxianyou.livingincampus.base.BaseFragment;
+import com.fafu.zhengxianyou.livingincampus.bean.CommunityItem;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 
 /**
  * Created by zhengxianyou on 2017/2/13.
@@ -17,6 +27,8 @@ public class CommunityFragment extends BaseFragment implements View.OnClickListe
     private View mView;
     private RecyclerView rv_community;
     private FloatingActionButton fab;
+    private List<CommunityItem> mCommunityItems = new ArrayList<>();
+    private CommunityAdapter mAdapter;
     private static final String TAG = CommunityFragment.class.getSimpleName();
 
     /**
@@ -41,17 +53,37 @@ public class CommunityFragment extends BaseFragment implements View.OnClickListe
     }
 
     @Override
+    protected void initData() {
+        super.initData();
+        BmobQuery<CommunityItem> query = new BmobQuery<>();
+        query.setLimit(300);
+        query.order("-updatedAt");
+
+        query.findObjects(new FindListener<CommunityItem>() {
+
+            @Override
+            public void done(List<CommunityItem> list, BmobException e) {
+                Log.e(TAG,"BmobQuery");
+                mCommunityItems = list;
+                mAdapter = new CommunityAdapter(mContext,mCommunityItems);
+                rv_community.setAdapter(mAdapter);
+
+            }
+        });
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fab:
                 getFragmentManager()
                         .beginTransaction()
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
-                        .replace(R.id.community_container, AddCommunityFragment.newInstance())
+                        .hide(this)
+                        .add(R.id.community_container,AddCommunityFragment.newInstance())
                         .addToBackStack(null)
                         .commit();
                 break;
-//            case R.id.
         }
     }
 }

@@ -180,7 +180,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
                         intent.putExtra("icon",icon);
                         intent.putExtra("nickName",nickName);
                         startActivity(intent);
-//                        getActivity().finish();
+                        getActivity().finish();
                     } else {
                         Log.e("err1", e.getErrorCode() + "" + e.getMessage());
                     }

@@ -36,8 +36,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
-    compile files('libs/glide-3.7.0.jar')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
     compile files('libs/jsoup-1.10.1.jar')
     compile files('libs/AMap3DMap_4.1.3_AMapSearch_3.6.1_AMapLocation_3.2.1_20161228.jar')
     compile files('libs/BmobSDK_3.5.3_20161116.jar')

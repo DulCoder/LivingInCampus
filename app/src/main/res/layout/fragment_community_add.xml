@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <EditText
+        android:id="@+id/et_community"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/bg_edit"
+        android:hint="说点什么吧..."
+        android:layout_centerHorizontal="true"/>
+
     <Button
-        android:text="Button"
+        android:id="@+id/btn_publish"
+        android:text="发布"
+        android:layout_below="@+id/et_community"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button"/>
-</LinearLayout>
+        android:layout_margin="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@drawable/bg_button"/>
+</RelativeLayout>

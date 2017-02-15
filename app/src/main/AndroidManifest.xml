@@ -61,7 +61,8 @@
         <activity android:name=".LoginActivity">
         </activity>
         <activity
-            android:name=".CommunityActivity"/>
+            android:name=".CommunityActivity"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
