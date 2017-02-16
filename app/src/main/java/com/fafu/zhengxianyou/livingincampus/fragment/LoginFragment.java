@@ -1,6 +1,5 @@
 package com.fafu.zhengxianyou.livingincampus.fragment;
 
-import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -8,9 +7,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.fafu.zhengxianyou.livingincampus.MainActivity;
 import com.fafu.zhengxianyou.livingincampus.MyApplication;
 import com.fafu.zhengxianyou.livingincampus.R;
 import com.fafu.zhengxianyou.livingincampus.base.BaseFragment;
@@ -26,7 +23,7 @@ import static com.fafu.zhengxianyou.livingincampus.MyApplication.editor;
  * Created by zhengxianyou on 2017/2/3.
  */
 
-public class LoginFragment extends BaseFragment implements View.OnClickListener{
+public class LoginFragment extends BaseFragment implements View.OnClickListener {
     private View v;
 
     private EditText et_login, et_password;
@@ -35,7 +32,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
     private CheckBox cb_choice;
 
     /**
-     *返回创建fragment实例
+     * 返回创建fragment实例
      */
     public static LoginFragment newInstance() {
         LoginFragment mFragment = new LoginFragment();
@@ -45,7 +42,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
 
     @Override
     protected View initView() {
-        v = View.inflate(mContext,R.layout.fragment_login,null);
+        v = View.inflate(mContext, R.layout.fragment_login, null);
 
         findView();
         getJudge();
@@ -56,10 +53,10 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
      * 判断是否保存密码
      */
     private void getJudge() {
-        boolean isChecked = MyApplication.sp.getBoolean("isChecked",false);
-        if (isChecked){
-            String name = MyApplication.sp.getString("name",null);
-            String password = MyApplication.sp.getString("password",null);
+        boolean isChecked = MyApplication.sp.getBoolean("isChecked", false);
+        if (isChecked) {
+            String name = MyApplication.sp.getString("name", null);
+            String password = MyApplication.sp.getString("password", null);
 
             et_login.setText(name);
             et_password.setText(password);
@@ -89,9 +86,9 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
         cb_choice.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
+                if (isChecked) {
                     cb_choice.setChecked(true);
-                }else {
+                } else {
 
                 }
             }
@@ -109,7 +106,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
         switch (view.getId()) {
 
             case R.id.btn_login:
-                Utils.toast(getContext(),"Login");
+                Utils.toast(getContext(), "Login");
                 login();
 
                 break;
@@ -137,6 +134,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
                 .addToBackStack(null)
                 .commit();
     }
+
     /**
      * 跳转到注册界面
      */
@@ -166,20 +164,18 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
             public void done(MyUser myUser, BmobException e) {
                 try {
                     if (e == null) {
-                        MyApplication.editor.putBoolean("isChecked",cb_choice.isChecked());
-                        if (cb_choice.isChecked()){
-                            editor.putString("name",name);
-                            editor.putString("password",password);
-                            editor.commit();
+                        MyApplication.editor.putBoolean("isChecked", cb_choice.isChecked());
+                        if (cb_choice.isChecked()) {
+                            editor.putString("name", name);
+                            editor.putString("password", password);
                         }
-                        String icon =  myUser.getMyIcon();
+                        String icon = myUser.getMyIcon();
                         String nickName = myUser.getNickName();
 
+                        editor.putString("icon", icon);
+                        editor.putString("nickName", nickName);
+                        editor.commit();
 
-                        Intent intent = new Intent(getActivity(), MainActivity.class);
-                        intent.putExtra("icon",icon);
-                        intent.putExtra("nickName",nickName);
-                        startActivity(intent);
                         getActivity().finish();
                     } else {
                         Log.e("err1", e.getErrorCode() + "" + e.getMessage());
@@ -187,15 +183,12 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
 
                 } catch (Exception exception) {
                     Log.e("err", exception.getMessage() + "");
-                    toast("正在登录");
+                    Utils.toast(mContext,"正在登录");
                 }
             }
         });
 
     }
 
-    private void toast(String s) {
-        Toast.makeText(getActivity(), s, Toast.LENGTH_SHORT).show();
 
-    }
 }

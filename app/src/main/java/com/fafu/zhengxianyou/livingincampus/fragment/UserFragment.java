@@ -8,10 +8,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fafu.zhengxianyou.livingincampus.LoginActivity;
+import com.fafu.zhengxianyou.livingincampus.MyApplication;
 import com.fafu.zhengxianyou.livingincampus.R;
 import com.fafu.zhengxianyou.livingincampus.base.BaseFragment;
 import com.fafu.zhengxianyou.livingincampus.bean.MyUser;
 import com.fafu.zhengxianyou.livingincampus.config.Config;
+
+import static com.fafu.zhengxianyou.livingincampus.MyApplication.editor;
 
 /**
  * Created by zhengxianyou on 2017/1/2.
@@ -115,7 +118,7 @@ public class UserFragment extends BaseFragment implements View.OnClickListener {
         switch (v.getId()){
             case R.id.login_reg:
                 startActivity(new Intent(mContext, LoginActivity.class));
-                getActivity().finish();
+//                getActivity().finish();
                 break;
             case R.id.changeIcon:
 
@@ -140,6 +143,10 @@ public class UserFragment extends BaseFragment implements View.OnClickListener {
         logout.setVisibility(View.GONE);
         myIcon.setImageResource(R.drawable.overcast);
         myId.setText("未登录");
+
+        MyApplication.editor.remove("icon");
+        editor.remove("nickName");
+        editor.commit();
         Config.setMyIcon(null);
         Config.setNickName(null);
     }

@@ -1,5 +1,6 @@
 package com.fafu.zhengxianyou.livingincampus.fragment;
 
+import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -100,6 +101,7 @@ public class AddCommunityFragment extends BaseFragment implements View.OnClickLi
                         }else {
                             getFragmentManager()
                                     .beginTransaction()
+                                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                                     .replace(R.id.community_container, CommunityFragment.newInstance())
                                     .commit();
                         }

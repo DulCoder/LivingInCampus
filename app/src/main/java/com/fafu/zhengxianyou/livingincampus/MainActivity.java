@@ -75,11 +75,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        String icon = getIntent().getStringExtra("icon");
-        String nickName = getIntent().getStringExtra("nickName");
-        Config.setMyIcon(icon);
-        Config.setNickName(nickName);
         //申请所需要的权限
         checkNeedPermission();
         //初始化View
@@ -91,6 +86,16 @@ public class MainActivity extends AppCompatActivity {
         //初始化定位
         initLocation();
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        String icon = MyApplication.sp.getString("icon", null);
+        String nickName = MyApplication.sp.getString("nickName", null);
+        Config.setMyIcon(icon);
+        Config.setNickName(nickName);
     }
 
     /**
