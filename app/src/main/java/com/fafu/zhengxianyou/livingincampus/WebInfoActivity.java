@@ -7,7 +7,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class BannerInfoActivity extends Activity {
+public class WebInfoActivity extends Activity {
     private WebView wb_banner_info_more;
     private String url;
 

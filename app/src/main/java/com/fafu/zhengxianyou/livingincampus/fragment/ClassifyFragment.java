@@ -5,11 +5,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import com.fafu.zhengxianyou.livingincampus.BannerInfoActivity;
 import com.fafu.zhengxianyou.livingincampus.BusLineActivity;
 import com.fafu.zhengxianyou.livingincampus.CommunityActivity;
 import com.fafu.zhengxianyou.livingincampus.Constants.Constant;
 import com.fafu.zhengxianyou.livingincampus.CourseActivity;
+import com.fafu.zhengxianyou.livingincampus.LibraryActivity;
 import com.fafu.zhengxianyou.livingincampus.R;
 import com.fafu.zhengxianyou.livingincampus.WeatherActivity;
 import com.fafu.zhengxianyou.livingincampus.adapter.ClassifyAdapter;
@@ -83,12 +83,11 @@ public class ClassifyFragment extends BaseFragment {
 
                         break;
                     case 1:
-                        Intent intent = new Intent(mContext, BannerInfoActivity.class);
+                        Intent intent = new Intent(mContext, LibraryActivity.class);
                         intent.putExtra("url", Constant.LIBRARY);
                         startActivity(intent);
                         break;
                     case 2:
-//                        Utils.toast(mContext, "此模块待开发...");
                         startActivity(new Intent(mContext, CommunityActivity.class));
                         break;
                     case 3:

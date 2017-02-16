@@ -9,6 +9,8 @@
     <color name="colorWhite">#ffffff</color>
     <color name="transparent">#00000000</color>
     <color name="darkGray"> #C0C0C0</color>
+    <color name="bgRadioGroup">#11000000</color>
+    <color name="shit">#795548</color>
     <color name="gary">#898989</color>
     <color name="blue">#4c90f9</color>
     <color name="act_background">#efefef</color>
@@ -16,6 +18,7 @@
     <color name="button">#03a9f4</color>
     <color name="item">#e0f7fa</color>
     <color name="gold">#ffab00</color>
+    <color name="darkBlue">#1a237e</color>
 
     <color name="red"> #FF0000</color>
     <color name="f850_default_blue">#0079ff</color>

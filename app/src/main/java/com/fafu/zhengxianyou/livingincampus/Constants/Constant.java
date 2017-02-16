@@ -29,6 +29,10 @@ public class Constant {
     //图书馆
     public static final String LIBRARY = "http://lib.fafu.edu.cn/";
 
+    //馆藏目录
+    public static final String LIBRARY_NATIVE = "http://210.34.85.114:8080/opac/openlink.php?strSearchType=";
+    public static final String LIBRARY_NATIVE_TEXT ="&historyCount=1&strText=";
+    public static final String LIBRARY_NATIVE_TYPE = "&doctype=";
     //高德key
     public static final String AMAPKEY = "24c64b84e1d42b6858387de12d60e8ae";
 

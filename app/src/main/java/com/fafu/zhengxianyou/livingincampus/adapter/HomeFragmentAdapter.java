@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.fafu.zhengxianyou.livingincampus.BannerInfoActivity;
+import com.fafu.zhengxianyou.livingincampus.WebInfoActivity;
 import com.fafu.zhengxianyou.livingincampus.Constants.Constant;
 import com.fafu.zhengxianyou.livingincampus.R;
 import com.fafu.zhengxianyou.livingincampus.bean.ResultBeanData;
@@ -202,7 +202,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
                 @Override
                 public void OnBannerClick(int position) {
                     String url = pictureBeans.get(position - 1).getUrl();
-                    Intent intent = new Intent(mContext, BannerInfoActivity.class);
+                    Intent intent = new Intent(mContext, WebInfoActivity.class);
                     intent.putExtra("url", url);
                     mContext.startActivity(intent);
                 }
@@ -249,7 +249,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
                 @Override
                 public void onItemClickListener(int position) {
                     String url = Constant.FAFU+focusBeanList.get(position).getHref();
-                    Intent intent = new Intent(mContext, BannerInfoActivity.class);
+                    Intent intent = new Intent(mContext, WebInfoActivity.class);
                     intent.putExtra("url", url);
                     mContext.startActivity(intent);
                 }
@@ -282,7 +282,7 @@ class AnnouncementViewHolder extends RecyclerView.ViewHolder{
             @Override
             public void onItemClickListener(int position) {
                 String url = Constant.FAFU+announcementBeanList.get(position).getHref();
-                Intent intent = new Intent(mContext, BannerInfoActivity.class);
+                Intent intent = new Intent(mContext, WebInfoActivity.class);
                 intent.putExtra("url", url);
                 mContext.startActivity(intent);
             }
@@ -316,7 +316,7 @@ class AnnouncementViewHolder extends RecyclerView.ViewHolder{
                 @Override
                 public void onItemClickListener(int position) {
                     String url = Constant.FAFU+campusCultureBeanList.get(position).getHref();
-                    Intent intent = new Intent(mContext, BannerInfoActivity.class);
+                    Intent intent = new Intent(mContext, WebInfoActivity.class);
                     intent.putExtra("url", url);
                     mContext.startActivity(intent);
                 }
@@ -349,7 +349,7 @@ class AnnouncementViewHolder extends RecyclerView.ViewHolder{
                 @Override
                 public void onItemClickListener(int position) {
                     String url = Constant.FAFU+collegeTendsBeanList.get(position).getHref();
-                    Intent intent = new Intent(mContext, BannerInfoActivity.class);
+                    Intent intent = new Intent(mContext, WebInfoActivity.class);
                     intent.putExtra("url", url);
                     mContext.startActivity(intent);
                 }
@@ -381,7 +381,7 @@ class AnnouncementViewHolder extends RecyclerView.ViewHolder{
                 @Override
                 public void onItemClickListener(int position) {
                     String url = Constant.FAFU+academicTendsBeanList.get(position).getHref();
-                    Intent intent = new Intent(mContext, BannerInfoActivity.class);
+                    Intent intent = new Intent(mContext, WebInfoActivity.class);
                     intent.putExtra("url", url);
                     mContext.startActivity(intent);
                 }

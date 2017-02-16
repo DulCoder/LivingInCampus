@@ -37,7 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BannerInfoActivity"
+            android:name=".WebInfoActivity"
             android:parentActivityName=".MainActivity">
         </activity>
         <activity android:name=".WeatherActivity"/>
@@ -63,6 +63,8 @@
         <activity
             android:name=".CommunityActivity"
             android:parentActivityName=".MainActivity"/>
+        <activity android:name=".LibraryActivity">
+        </activity>
     </application>
 
 </manifest>

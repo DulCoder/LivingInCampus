@@ -17,7 +17,7 @@
         android:id="@+id/rg_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#11000000"
+        android:background="@color/bgRadioGroup"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="5dp">

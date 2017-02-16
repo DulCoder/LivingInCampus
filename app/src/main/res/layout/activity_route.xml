@@ -6,13 +6,13 @@
 
 
     <RelativeLayout
-        android:id="@+id/routemap_header"
+        android:id="@+id/route_map_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/title_background"
         >
         <LinearLayout
-            android:id="@+id/routemap_choose"
+            android:id="@+id/route_map_choose"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:background="@drawable/title_background"
@@ -131,7 +131,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_layout"
-        android:layout_below="@id/routemap_header" >
+        android:layout_below="@id/route_map_header" >
     </com.amap.api.maps.MapView>
 
 
@@ -139,7 +139,7 @@
         android:id="@+id/bus_result"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/routemap_header"
+        android:layout_below="@id/route_map_header"
         android:background="@color/transparent"
         android:orientation="vertical"
         android:visibility="gone" >

@@ -64,7 +64,7 @@ public class RouteActivity extends Activity implements AMap.OnMapClickListener,
 
     private LinearLayout mBusResultLayout;
     private RelativeLayout mBottomLayout;
-    private TextView mRotueTimeDes, mRouteDetailDes;
+    private TextView mRouteTimeDes, mRouteDetailDes;
     private ImageView mBus;
     private ImageView mDrive;
     private ImageView mWalk;
@@ -83,6 +83,7 @@ public class RouteActivity extends Activity implements AMap.OnMapClickListener,
         mapView.onCreate(savedInstanceState);// 此方法必须重写
         init();
         setFromAndToMarker();
+        searchRouteResult(ROUTE_TYPE_DRIVE, RouteSearch.DrivingDefault);  //默认是驾车路线规划
     }
 
     private void setFromAndToMarker() {
@@ -110,7 +111,7 @@ public class RouteActivity extends Activity implements AMap.OnMapClickListener,
         mRouteSearch.setRouteSearchListener(this);
         mBottomLayout = (RelativeLayout) findViewById(R.id.bottom_layout);
         mBusResultLayout = (LinearLayout) findViewById(R.id.bus_result);
-        mRotueTimeDes = (TextView) findViewById(R.id.firstline);
+        mRouteTimeDes = (TextView) findViewById(R.id.firstline);
         mRouteDetailDes = (TextView) findViewById(R.id.secondline);
         mDrive = (ImageView)findViewById(R.id.route_drive);
         mBus = (ImageView)findViewById(R.id.route_bus);
@@ -253,7 +254,7 @@ public class RouteActivity extends Activity implements AMap.OnMapClickListener,
                             mDriveRouteResult.getStartPos(),
                             mDriveRouteResult.getTargetPos(), null);
                     drivingRouteOverlay.setNodeIconVisibility(false);//设置节点marker是否显示
-                    drivingRouteOverlay.setIsColorfulline(true);//是否用颜色展示交通拥堵情况，默认true
+                    drivingRouteOverlay.setIsColorFulLine(true);//是否用颜色展示交通拥堵情况，默认true
                     drivingRouteOverlay.removeFromMap();
                     drivingRouteOverlay.addToMap();
                     drivingRouteOverlay.zoomToSpan();
@@ -261,7 +262,7 @@ public class RouteActivity extends Activity implements AMap.OnMapClickListener,
                     int dis = (int) drivePath.getDistance();
                     int dur = (int) drivePath.getDuration();
                     String des = AMapUtil.getFriendlyTime(dur)+"("+AMapUtil.getFriendlyLength(dis)+")";
-                    mRotueTimeDes.setText(des);
+                    mRouteTimeDes.setText(des);
                     mRouteDetailDes.setVisibility(View.VISIBLE);
                     int taxiCost = (int) mDriveRouteResult.getTaxiCost();
                     mRouteDetailDes.setText("打车约"+taxiCost+"元");
@@ -311,7 +312,7 @@ public class RouteActivity extends Activity implements AMap.OnMapClickListener,
                     int dis = (int) walkPath.getDistance();
                     int dur = (int) walkPath.getDuration();
                     String des = AMapUtil.getFriendlyTime(dur)+"("+AMapUtil.getFriendlyLength(dis)+")";
-                    mRotueTimeDes.setText(des);
+                    mRouteTimeDes.setText(des);
                     mRouteDetailDes.setVisibility(View.GONE);
                     mBottomLayout.setOnClickListener(new View.OnClickListener() {
                         @Override
