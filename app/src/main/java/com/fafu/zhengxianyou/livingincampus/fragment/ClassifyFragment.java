@@ -84,7 +84,6 @@ public class ClassifyFragment extends BaseFragment {
                         break;
                     case 1:
                         Intent intent = new Intent(mContext, LibraryActivity.class);
-                        intent.putExtra("url", Constant.LIBRARY);
                         startActivity(intent);
                         break;
                     case 2:

@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/library"
         />
+
     <RadioGroup
         android:id="@+id/rg_lib"
         android:layout_width="match_parent"
@@ -52,12 +53,14 @@
 
     </RadioGroup>
 
+    <!--馆藏目录布局-->
     <LinearLayout
+        android:id="@+id/ll_native"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/colorWhite">
-
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
 
 
         <LinearLayout
@@ -65,11 +68,13 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:padding="3dp">
+
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:background="@drawable/bg_spinner">
+
                 <Spinner
                     android:id="@+id/spinner_lib"
                     android:layout_width="wrap_content"
@@ -77,14 +82,14 @@
                 </Spinner>
             </FrameLayout>
 
-<EditText
-    android:id="@+id/et_lib"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="6"
-    android:layout_margin="5dp"
-    android:maxLines="1"
-    android:background="@drawable/bg_spinner"/>
+            <EditText
+                android:id="@+id/et_lib"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="6"
+                android:background="@drawable/bg_spinner"
+                android:maxLines="1"/>
 
             <Button
                 android:id="@+id/btn_lib"
@@ -92,10 +97,11 @@
                 android:layout_height="30dp"
                 android:layout_weight="2"
                 android:background="@color/button"
-                android:textColor="@color/colorWhite"
-                android:text="检索"/>
+                android:text="检索"
+                android:textColor="@color/colorWhite"/>
 
         </LinearLayout>
+
         <RadioGroup
             android:id="@+id/rg_type"
             android:layout_width="match_parent"
@@ -108,40 +114,40 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="10sp"
-                android:text="所有书刊"/>
+                android:text="所有书刊"
+                android:textSize="10sp"/>
 
             <RadioButton
                 android:id="@+id/rb_01"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="10sp"
-                android:text="中文图书"/>
+                android:text="中文图书"
+                android:textSize="10sp"/>
 
             <RadioButton
                 android:id="@+id/rb_02"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="10sp"
-                android:text="西文图书"/>
+                android:text="西文图书"
+                android:textSize="10sp"/>
 
             <RadioButton
                 android:id="@+id/rb_11"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="10sp"
-                android:text="中文期刊"/>
+                android:text="中文期刊"
+                android:textSize="10sp"/>
 
             <RadioButton
                 android:id="@+id/rb_12"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textSize="10sp"
-                android:text="西文期刊"/>
+                android:text="西文期刊"
+                android:textSize="10sp"/>
 
 
         </RadioGroup>
@@ -149,6 +155,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -156,6 +163,205 @@
                 android:background="@drawable/consult"/>
         </FrameLayout>
 
+    </LinearLayout>
+
+    <!--百度学术布局-->
+    <LinearLayout
+        android:id="@+id/ll_baidu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="225dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/baidu"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/et_baidu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="7"
+                android:background="@drawable/bg_spinner2"
+                android:maxLines="1"/>
+
+            <Button
+                android:id="@+id/btn_baidu"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="3"
+                android:background="@color/button"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="百度一下"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/consult"/>
+        </FrameLayout>
+    </LinearLayout>
+
+<!--Fulink布局-->
+    <LinearLayout
+                  android:id="@+id/ll_fulink"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:visibility="gone"
+                  android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/fulink"/>
+
+        <RadioGroup
+            android:id="@+id/rg_link_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_link_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@drawable/bottom_text_color_drawable_selector"/>
+
+            <RadioButton
+                android:id="@+id/rb_book"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="图书"
+                android:textColor="@drawable/bottom_text_color_drawable_selector"/>
+
+            <RadioButton
+                android:id="@+id/rb_magazine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="期刊"
+                android:textColor="@drawable/bottom_text_color_drawable_selector"/>
+
+            <RadioButton
+                android:id="@+id/rb_news"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="报纸"
+                android:textColor="@drawable/bottom_text_color_drawable_selector"/>
+
+            <RadioButton
+                android:id="@+id/rb_thesis"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="论文"
+                android:textColor="@drawable/bottom_text_color_drawable_selector"/>
+
+            <RadioButton
+                android:id="@+id/rb_patent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="专利"
+                android:textColor="@drawable/bottom_text_color_drawable_selector"/>
+
+            <RadioButton
+                android:id="@+id/rb_video"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="视频"
+                android:textColor="@drawable/bottom_text_color_drawable_selector"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <EditText
+                android:id="@+id/et_link"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="6"
+                android:background="@drawable/bg_spinner"
+                android:maxLines="1"/>
+
+            <Button
+                android:id="@+id/btn_chn"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@color/button"
+                android:gravity="center"
+                android:text="中文搜索"
+                android:textColor="@color/colorWhite"/>
+
+            <Button
+                android:id="@+id/btn_for"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:layout_marginLeft="5dp"
+                android:background="@color/button"
+                android:gravity="center"
+                android:text="外文搜索"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/consult"/>
+        </FrameLayout>
     </LinearLayout>
 
 </LinearLayout>

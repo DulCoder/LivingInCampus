@@ -15,12 +15,14 @@ import java.util.Date;
 import java.util.List;
 
 public class BusLineAdapter extends BaseAdapter {
+	private Context mContext;
 	private List<BusLineItem> busLineItems;
 	private LayoutInflater layoutInflater;
 	private String price;
 
 	public BusLineAdapter(Context context, List<BusLineItem> busLineItems) {
 
+		mContext = context;
 		this.busLineItems = busLineItems;
 		layoutInflater = LayoutInflater.from(context);
 	}
@@ -73,6 +75,9 @@ public class BusLineAdapter extends BaseAdapter {
 		holder.fl_time.setText("首末班车: "+start+" --> "+end);
 
 		price = String.valueOf(busLineItem.getBasicPrice());          //获取票价
+		if (price.equals("0.0")){
+			price = "未提供";
+		}
         holder.bus_price.setText("单程票价: "+price);
 
 		holder.busId.setText("公 交 ID  : "                           //获取公交ID

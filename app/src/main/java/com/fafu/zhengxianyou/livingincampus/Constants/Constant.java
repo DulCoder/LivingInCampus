@@ -26,13 +26,14 @@ public class Constant {
     //教务动态
     public static final String ACADEMIC_TENDS = "http://www.fafu.edu.cn/5273/list.htm";
 
-    //图书馆
-    public static final String LIBRARY = "http://lib.fafu.edu.cn/";
-
-    //馆藏目录
+    //图书馆馆藏目录
     public static final String LIBRARY_NATIVE = "http://210.34.85.114:8080/opac/openlink.php?strSearchType=";
     public static final String LIBRARY_NATIVE_TEXT ="&historyCount=1&strText=";
     public static final String LIBRARY_NATIVE_TYPE = "&doctype=";
+
+    //图书馆百度学术
+    public static final String BAIDU_ACADEMIC = "http://xueshu.baidu.com/s?wd=";
+    public static final String BAIDU_TEXT = "&rsv_bp=0&tn=SE_baiduxueshu_c1gjeupa&rsv_spt=3&ie=utf-8&f=8&rsv_sug2=1&sc_f_para=sc_tasktype%3D{firstSimpleSearch}";
     //高德key
     public static final String AMAPKEY = "24c64b84e1d42b6858387de12d60e8ae";
 
