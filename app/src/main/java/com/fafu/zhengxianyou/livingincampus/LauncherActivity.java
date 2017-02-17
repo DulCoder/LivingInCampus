@@ -1,11 +1,11 @@
 package com.fafu.zhengxianyou.livingincampus;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
 
-public class LauncherActivity extends AppCompatActivity {
+public class LauncherActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

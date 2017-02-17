@@ -17,6 +17,7 @@ import java.util.List;
 public class BusLineAdapter extends BaseAdapter {
 	private List<BusLineItem> busLineItems;
 	private LayoutInflater layoutInflater;
+	private String price;
 
 	public BusLineAdapter(Context context, List<BusLineItem> busLineItems) {
 
@@ -45,35 +46,44 @@ public class BusLineAdapter extends BaseAdapter {
 		if (convertView == null) {
 			convertView = layoutInflater.inflate(R.layout.busline_item, null);
 			holder = new ViewHolder();
-			holder.busName = (TextView) convertView.findViewById(R.id.busname);
+			holder.busName = (TextView) convertView.findViewById(R.id.bus_name);
 			holder.fl_time = (TextView) convertView.findViewById(R.id.fl_time);
-			holder.busId = (TextView) convertView.findViewById(R.id.busid);
+			holder.bus_price = (TextView) convertView.findViewById(R.id.bus_price);
+			holder.busId = (TextView) convertView.findViewById(R.id.busId);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		BusLineItem busLineItem = busLineItems.get(position);
+
+		holder.busName.setText("公 交 名  : "                       //获取公交名
+				+ busLineItem.getBusLineName());
+
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");       //获取首末班车时间
 		Date sDate,eDate;
 		String start ,end;
-		sDate = busLineItems.get(position).getFirstBusTime();
-		eDate = busLineItems.get(position).getLastBusTime();
+		sDate = busLineItem.getFirstBusTime();
+		eDate = busLineItem.getLastBusTime();
 		if (sDate != null&&eDate != null) {
 			start = sdf.format(sDate);
 			end = sdf.format(eDate);
 		}else {
 			start = end ="未提供";
 		}
-		holder.busName.setText("公 交 名  : "
-				+ busLineItems.get(position).getBusLineName());
-		holder.fl_time.setText("起始时间: "+start+" --> "+end);
-		holder.busId.setText("公 交 ID  : "
-				+ busLineItems.get(position).getBusLineId());
+		holder.fl_time.setText("首末班车: "+start+" --> "+end);
+
+		price = String.valueOf(busLineItem.getBasicPrice());          //获取票价
+        holder.bus_price.setText("单程票价: "+price);
+
+		holder.busId.setText("公 交 ID  : "                           //获取公交ID
+				+ busLineItem.getBusLineId());
 		return convertView;
 	}
 
 	class ViewHolder {
 		public TextView busName;
 		public TextView fl_time;
+		public TextView bus_price;
 		public TextView busId;
 	}
 

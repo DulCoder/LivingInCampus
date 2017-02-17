@@ -1,7 +1,6 @@
 <resources>
-    <string name="app_name">LivingInCampus</string>
+    <string name="app_name">掌上农大</string>
     <string name="fafu">福建农林大学...</string>
-    <string name="titleBar">校园生活</string>
     <string name="home">首 页</string>
     <string name="classify">分 类</string>
     <string name="user">个人中心</string>

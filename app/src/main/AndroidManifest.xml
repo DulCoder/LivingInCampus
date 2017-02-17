@@ -62,8 +62,10 @@
         </activity>
         <activity
             android:name=".CommunityActivity"
+            android:label="@string/community"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".LibraryActivity">
+        <activity android:name=".LibraryActivity"
+            android:label="@string/library">
         </activity>
     </application>
 
