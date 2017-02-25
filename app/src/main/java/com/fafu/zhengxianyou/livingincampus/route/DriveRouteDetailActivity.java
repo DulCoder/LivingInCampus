@@ -13,7 +13,7 @@ import com.amap.api.services.route.DriveRouteResult;
 import com.amap.api.services.route.DriveStep;
 import com.amap.api.services.route.TMC;
 import com.fafu.zhengxianyou.livingincampus.R;
-import com.fafu.zhengxianyou.livingincampus.adapter.DriveSegmentListAdapter;
+import com.fafu.zhengxianyou.livingincampus.adapter.travel.DriveSegmentListAdapter;
 import com.fafu.zhengxianyou.livingincampus.utils.AMapUtil;
 
 import java.util.List;

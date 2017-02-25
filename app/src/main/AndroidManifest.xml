@@ -12,9 +12,12 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
-        android:name=".MyApplication"
+        android:name=".app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
@@ -25,11 +28,11 @@
             android:value="24c64b84e1d42b6858387de12d60e8ae"/>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".app.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".LauncherActivity">
+        <activity android:name=".app.LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -37,35 +40,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".WebInfoActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".app.WebInfoActivity"
+            android:parentActivityName=".app.MainActivity">
         </activity>
-        <activity android:name=".WeatherActivity"/>
+        <activity android:name=".classify.WeatherActivity"/>
 
         <service android:name="com.amap.api.location.APSService"/>
 
-        <activity android:name=".CourseActivity"/>
-        <activity android:name=".route.PoiAroundSearchActivity"/>
+        <activity android:name=".classify.course.CourseLoginActivity"/>
+        <activity android:name=".classify.PoiAroundSearchActivity"/>
         <activity android:name=".route.RouteActivity"/>
         <activity android:name=".route.DriveRouteDetailActivity"/>
         <activity android:name=".route.BusRouteDetailActivity"/>
         <activity android:name=".route.WalkRouteDetailActivity"/>
-        <activity android:name=".BusLineActivity"/>
+        <activity android:name=".classify.BusLineActivity"/>
 
-        <receiver android:name=".NetworkChangeReceiver">
+        <receiver android:name=".app.NetworkChangeReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
             </intent-filter>
         </receiver>
 
-        <activity android:name=".LoginActivity">
+        <activity android:name=".app.LoginActivity">
         </activity>
         <activity
-            android:name=".CommunityActivity"
+            android:name=".classify.CommunityActivity"
             android:label="@string/community"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".LibraryActivity"
+            android:parentActivityName=".app.MainActivity"/>
+        <activity
+            android:name=".classify.LibraryActivity"
             android:label="@string/library">
+        </activity>
+        <activity
+            android:name=".classify.course.CourseActivity"
+            android:label="@string/title_activity_course"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".classify.course.ScoreActivity">
         </activity>
     </application>
 

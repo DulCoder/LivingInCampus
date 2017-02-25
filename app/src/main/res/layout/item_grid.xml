@@ -17,7 +17,7 @@
         android:layout_marginTop="5dp"
         android:gravity="center_horizontal"
         android:text="新生"
-        android:textColor="#000"
+        android:textColor="@color/black"
         android:textSize="12sp" />
 
 </LinearLayout>

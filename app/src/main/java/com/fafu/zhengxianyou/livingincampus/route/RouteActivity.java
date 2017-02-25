@@ -33,7 +33,7 @@ import com.amap.api.services.route.RouteSearch;
 import com.amap.api.services.route.WalkPath;
 import com.amap.api.services.route.WalkRouteResult;
 import com.fafu.zhengxianyou.livingincampus.R;
-import com.fafu.zhengxianyou.livingincampus.adapter.BusResultListAdapter;
+import com.fafu.zhengxianyou.livingincampus.adapter.travel.BusResultListAdapter;
 import com.fafu.zhengxianyou.livingincampus.config.Config;
 import com.fafu.zhengxianyou.livingincampus.overlay.DrivingRouteOverlay;
 import com.fafu.zhengxianyou.livingincampus.overlay.WalkRouteOverlay;

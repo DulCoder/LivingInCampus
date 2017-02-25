@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.amap.api.services.route.WalkPath;
 import com.fafu.zhengxianyou.livingincampus.R;
-import com.fafu.zhengxianyou.livingincampus.adapter.WalkSegmentListAdapter;
+import com.fafu.zhengxianyou.livingincampus.adapter.travel.WalkSegmentListAdapter;
 import com.fafu.zhengxianyou.livingincampus.utils.AMapUtil;
 
 public class WalkRouteDetailActivity extends Activity {

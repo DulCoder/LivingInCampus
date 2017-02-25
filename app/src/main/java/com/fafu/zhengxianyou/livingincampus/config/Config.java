@@ -1,5 +1,10 @@
 package com.fafu.zhengxianyou.livingincampus.config;
 
+import com.fafu.zhengxianyou.livingincampus.bean.Course;
+import com.fafu.zhengxianyou.livingincampus.sqlite.DatabaseAdapter;
+
+import java.util.List;
+
 /**
  * Created by zhengxianyou on 2017/1/7.
  */
@@ -11,6 +16,9 @@ public class Config {
     private static boolean isConnectNet = true;
     private static String myIcon;                                    //保存头像信息
     private static String nickName;                                  //保存昵称
+    private static DatabaseAdapter sDatabaseAdapter;                                  //保存昵称
+
+    private static List<Course> sCourseList;
 
     public static String getCityName() {
         return cityName;
@@ -58,5 +66,21 @@ public class Config {
 
     public static void setNickName(String nickName) {
         Config.nickName = nickName;
+    }
+
+    public static List<Course> getCourseList() {
+        return sCourseList;
+    }
+
+    public static void setCourseList(List<Course> courseList) {
+        sCourseList = courseList;
+    }
+
+    public static DatabaseAdapter getDatabaseAdapter() {
+        return sDatabaseAdapter;
+    }
+
+    public static void setDatabaseAdapter(DatabaseAdapter databaseAdapter) {
+        sDatabaseAdapter = databaseAdapter;
     }
 }

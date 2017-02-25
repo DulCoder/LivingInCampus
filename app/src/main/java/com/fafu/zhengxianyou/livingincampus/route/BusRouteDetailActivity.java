@@ -20,7 +20,7 @@ import com.amap.api.maps.model.Marker;
 import com.amap.api.services.route.BusPath;
 import com.amap.api.services.route.BusRouteResult;
 import com.fafu.zhengxianyou.livingincampus.R;
-import com.fafu.zhengxianyou.livingincampus.adapter.BusSegmentListAdapter;
+import com.fafu.zhengxianyou.livingincampus.adapter.travel.BusSegmentListAdapter;
 import com.fafu.zhengxianyou.livingincampus.overlay.BusRouteOverlay;
 import com.fafu.zhengxianyou.livingincampus.utils.AMapUtil;
 

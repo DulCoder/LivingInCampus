@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/header_toast_bg"
+              android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="@color/gold"/>
+
+        <RadioButton
+            style="@style/course_week_header_style"
+            android:text="周一"/>
+
+        <RadioButton
+            style="@style/course_week_header_style"
+            android:text="周二"/>
+
+        <RadioButton
+            style="@style/course_week_header_style"
+            android:text="周三"/>
+
+        <RadioButton
+            style="@style/course_week_header_style"
+            android:text="周四"/>
+
+        <RadioButton
+            style="@style/course_week_header_style"
+            android:text="周五"/>
+
+        <RadioButton
+            style="@style/course_week_header_style"
+            android:text="周六"/>
+
+        <RadioButton
+            style="@style/course_week_header_style"
+            android:text="周日"/>
+
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="1"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="2"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="3"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="4"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="5"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="6"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="7"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="8"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="9"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="10"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="11"
+                    />
+
+                <TextView
+                    style="@style/course_number_style"
+                    android:text="12"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/monday"
+                style="@style/course_week_style">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tuesday"
+                style="@style/course_week_style">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/wednesday"
+                style="@style/course_week_style">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/thursday"
+                style="@style/course_week_style">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/friday"
+                style="@style/course_week_style">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/saturday"
+                style="@style/course_week_style">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sunday"
+                style="@style/course_week_style">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

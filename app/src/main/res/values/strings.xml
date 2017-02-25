@@ -10,7 +10,7 @@
     <string name="collegeTends">学院动态</string>
     <string name="academicTends">教务动态</string>
     <string name="loading">加载中...</string>
-    <string name="freshmen">课程表</string>
+    <string name="course">课程表</string>
     <string name="library">图书馆</string>
     <string name="community">校园社区</string>
     <string name="weather">天气</string>
@@ -26,4 +26,17 @@
     <string name="title_activity_community">CommunityActivity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_course">CourseActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    //课程表
+    <string name="input_username">教务管理系统账号</string>
+    <string name="input_password">教务管理系统密码</string>
+    <string name="verificationCode">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="input_verificationCode">请输入验证码</string>
+    <string name="select_time">请选择查询时间</string>
+    <string name="school_year">学年</string>
+    <string name="term">学期</string>
 </resources>

@@ -6,7 +6,7 @@
 
 <GridView
     android:id="@+id/gv_classify"
-   android:verticalSpacing="20dp"
+    android:verticalSpacing="20dp"
     android:layout_marginTop="60dp"
     android:gravity="center_vertical"
     android:layout_width="match_parent"

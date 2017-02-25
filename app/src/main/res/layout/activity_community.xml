@@ -5,7 +5,7 @@
     android:id="@+id/community_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fafu.zhengxianyou.livingincampus.CommunityActivity">
+    tools:context="com.fafu.zhengxianyou.livingincampus.classify.CommunityActivity">
 
 
 
