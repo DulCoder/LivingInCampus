@@ -49,12 +49,12 @@ public class ScoreAdapter extends BaseAdapter {
         if(arg1 == null) {
             view = LayoutInflater.from(context).inflate(R.layout.score_item, null);
             viewHolder = new ViewHolder();
-            viewHolder.subject = (TextView) view.findViewById(R.id.tv_subject);
-            viewHolder.category = (TextView) view.findViewById(R.id.tv_category);
-            viewHolder.credit = (TextView) view.findViewById(R.id.tv_credit);
-            viewHolder.gradePoint = (TextView) view.findViewById(R.id.tv_gradePoint);
-            viewHolder.score = (TextView) view.findViewById(R.id.tv_score);
-            viewHolder.finalScore = (TextView) view.findViewById(R.id.tv_finalScore);
+            viewHolder.subject = (TextView) view.findViewById(R.id.tv_year);
+            viewHolder.category = (TextView) view.findViewById(R.id.tv_term);
+            viewHolder.credit = (TextView) view.findViewById(R.id.tv_score);
+            viewHolder.gradePoint = (TextView) view.findViewById(R.id.tv_finalScore);
+            viewHolder.score = (TextView) view.findViewById(R.id.tv_subject);
+            viewHolder.finalScore = (TextView) view.findViewById(R.id.tv_point);
             view.setTag(viewHolder);
         } else {
             view = arg1;
