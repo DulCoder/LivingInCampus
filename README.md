@@ -1,5 +1,5 @@
 # LivingInCampus
-校园生活项目(毕业设计)，更新中... 
+校园生活项目(毕业设计)，停止更新
 ### 主要涉及技术包括
  fragment,radiogroup,recyclerview&nbsp;listview,gridview,webview,SharedPreferences,sqlite,okhttp,json(Gson),Glide,banner,jsoup,firebug,handler,接口回调,多线程,io流,高德地图     
  
